@@ -1,12 +1,6 @@
 # Stock-Trading-Limit-Monitoring
-This screenshot shows and end-user PowerBI table for monitoring securities limit breaches at EOD.
-<img width="1305" height="578" alt="image" src="https://github.com/user-attachments/assets/f8bb4176-4967-4118-9604-e4897e03d122" />
-
-Where limits on the trading team's shared holdings of a given security are given by the following table (46 securities in this project):
-
-<img width="503" height="463" alt="image" src="https://github.com/user-attachments/assets/e5ce38ba-d64d-4c0e-a890-931f4c212250" />
-
-Entity relationship diagram (including end-user report tables):
+### Background: 
+This project seeks to build a Proof of Concept (POC) of trading limit monitoring work-flow, which is part of daily Global Risk Management operations.  In a typical financial institute, this work flow is usually used by Capital Markets middle offices to monitor Front Office trading activities and ensure trading activities are within defined notional limits. In this project, Excel, mySQL and PowerBI reports are used to prepare, store, transform, export and display data. To complete this project, fundamental stock trading knowledge and data analysis skills are required.
 
 ### Key Metrics:
 **EOD Position**: The sum of the signed notional value of all trades, grouped by accounts, trader, or securities, depending on which limit is being monitored.
@@ -14,9 +8,6 @@ Entity relationship diagram (including end-user report tables):
 **Limit Usage:** The percent of a given limit taken up by a security's, account's, and/or trader's EOD position.
 
 **Breach Status:** Shows "Breach" for limit usage >100%, and "Warning" for limit usage between 80-100%. (seems to be an IBP)
-
-### Background: 
-This project seeks to build a Proof of Concept (POC) of trading limit monitoring work-flow, which is part of daily Global Risk Management operations.  In a typical financial institute, this work flow is usually used by Capital Markets middle offices to monitor Front Office trading activities and ensure trading activities are within defined notional limits. In this project, Excel, mySQL and PowerBI reports are used to prepare, store, transform, export and display data. To complete this project, fundamental stock trading knowledge and data analysis skills are required.
 
 **Break downs**: A typical trading floor limit monitoring process includes
 1. Getting data from trading systems, and other systems such as HR for trading or account info
@@ -31,6 +22,18 @@ This project seeks to build a Proof of Concept (POC) of trading limit monitoring
 Create a work flow with csv files as input, MYSQL as data storage, and PowerBI to build and send reports to end users.
 Workflow 1: Manual- or auto-export csv files into mySQL DB
 Workflow 2: Use queries to view various limits and their breach status
+
+### Workflow Diagram:
+<img width="1183" height="440" alt="image" src="https://github.com/user-attachments/assets/628af68f-341c-472a-ac8e-aa6250facda6" />
+
+### PowerBI Report**:
+<img width="1305" height="578" alt="image" src="https://github.com/user-attachments/assets/f8bb4176-4967-4118-9604-e4897e03d122" />
+
+Where limits on the trading team's shared holdings of a given security are given by the following table (46 securities in this project):
+
+<img width="503" height="463" alt="image" src="https://github.com/user-attachments/assets/e5ce38ba-d64d-4c0e-a890-931f4c212250" />
+
+
 
 ## Desired Tables:
 
