@@ -3,6 +3,7 @@ This screenshot shows and end-user PowerBI table for monitoring securities limit
 <img width="1305" height="578" alt="image" src="https://github.com/user-attachments/assets/f8bb4176-4967-4118-9604-e4897e03d122" />
 
 Where limits on the trading team's shared holdings of a given security are given by the following table (46 securities in this project):
+
 <img width="503" height="463" alt="image" src="https://github.com/user-attachments/assets/e5ce38ba-d64d-4c0e-a890-931f4c212250" />
 
 Entity relationship diagram (including end-user report tables):
