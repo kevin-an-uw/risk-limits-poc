@@ -1,0 +1,11 @@
+Trader,TraderName,TraderRole,TraderPositionMVLimit
+TRD1,Ethan Liu,"Managing Director, Head of Equity Trading",58750000
+TRD2,Sofia Patel,"Director, Equity Trading",17500000
+TRD3,Noah Tremblay,"Vice President, Portfolio & Risk",9750000
+TRD4,Maya Singh,"Senior Associate, Execution & Market Making",9250000
+TRD5,Lucas Martin,"Associate, Cash Equities",4000000
+TRD6,Ava Chen,"Associate, ETF & Index Arb",2750000
+TRD7,Daniel Nguyen,"Analyst, Energy & Financials",1000000
+TRD8,Olivia Roy,"Analyst, Tech & Industrials",1750000
+TRD9,Zachary Brown,"Analyst, Small-Cap & Event Driven",1250000
+TRD10,Priya Desai,"Execution Trader, Algorithmic",2750000
