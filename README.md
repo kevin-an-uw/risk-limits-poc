@@ -1,6 +1,6 @@
 # Stock-Trading-Limit-Monitoring
 ### Background: 
-This project seeks to build a Proof of Concept (POC) of trading limit monitoring work-flow, which is part of daily Global Risk Management operations.  In a typical financial institute, this work flow is usually used by Capital Markets middle offices to monitor Front Office trading activities and ensure trading activities are within defined notional limits. In this project, Excel, mySQL and PowerBI reports are used to prepare, store, transform, export and display data. To complete this project, fundamental stock trading knowledge and data analysis skills are required.
+This project seeks to build a Proof of Concept (POC) of trading limit monitoring work-flow, which is part of daily Global Risk Management operations.  In a typical financial institute, this work flow is usually used by Capital Markets middle offices to monitor Front Office trading activities and ensure trading activities are within defined limits. In this project, Excel, mySQL and PowerBI reports are used to prepare, store, transform, export and display data. To complete this project, fundamental stock trading knowledge and data analysis skills are required.
 
 ### Key Metrics:
 **EOD Position**: The sum of the signed notional value of all trades, grouped by accounts, trader, or securities, depending on which limit is being monitored.
@@ -9,19 +9,10 @@ This project seeks to build a Proof of Concept (POC) of trading limit monitoring
 
 **Breach Status:** Shows "Breach" for limit usage >100%, and "Warning" for limit usage between 80-100%. (seems to be an IBP)
 
-**Break downs**: A typical trading floor limit monitoring process includes
-1. Getting data from trading systems, and other systems such as HR for trading or account info
-2. Cleaning and transforming data, deriving necessary metrics through Excel
-  a. This project will do so Transforming data, calculating necessary metrics through Excel, Tableau, etc.. This project does so using:
-   i. MySQL queries for EOD limit monitoring
-   ii. PowerBI reports to visualize
-   iii. Excel for intra-day limit monitoring
-3. Visualizing data for end users through reports
-
-**Goals:**
-Create a work flow with csv files as input, MYSQL as data storage, and PowerBI to build and send reports to end users.
-Workflow 1: Manual- or auto-export csv files into mySQL DB
-Workflow 2: Use queries to view various limits and their breach status
+**Break downs**: This project showcases a simplified typical trading floor limit monitoring process, which entails:
+1. Getting data from trading systems and other systems such as HR for trading or account info
+2. Cleaning and transforming data, deriving necessary metrics through Excel, SQL, or PowerBI
+3. Visualizing data for end users through reports and charts
 
 ### Workflow Diagram:
 <img width="1183" height="440" alt="image" src="https://github.com/user-attachments/assets/628af68f-341c-472a-ac8e-aa6250facda6" />
@@ -33,33 +24,34 @@ Where limits on the trading team's shared holdings of a given security are given
 
 <img width="503" height="463" alt="image" src="https://github.com/user-attachments/assets/e5ce38ba-d64d-4c0e-a890-931f4c212250" />
 
-
+## Scenario Breakdown:
+A financial institute has a team of securities traders, with metrics like "limits" flagging high-risk behaviour (and sometimes preventing it in the form of pre-trade limits, though that is out of this project's scope). These traders buy securities and receive funds for selling securities with balances and loans (credit) from
 
 ## Desired Tables:
 
 **Account Limits**
 
-a) for each account, what is total buy in each account 
+a) What is the EOD position of each account?
 
-b) for each account, what is the limit
+b) What are the position limits on each account?
 
-c) display breach, warning for exceeding 100%, 80%
+c) Display "breach" and "warning" for EOD account positions exceeding 100% and 80% of the account's limit respectively, with different flags for credit/balance breaches or warnings.
 
-**Per-Trade Limits**
+**Securities Limits**
 
-a) for each trade, what is their total buy volume
+a) What is the trading team's EOD position of each security?
 
-b) for each trade, what is their limit
+b) What is the position limit on each security?
 
-c) display breach, warning for exceeding 100%, 80%
+c) Display "breach" and "warning" for EOD security positions exceeding 100% and 80% of the securitiy's limit respectively
 
-**Per-Stock Limits**
+**Trader Limits**
 
-a) For each company, find the total $ amount held by the firm
+a) What is the EOD position of each trader in the firm's team?
 
-b) For each company, find their "Total Stock Limit" - the limit on how much $ of the stock can be held at a time
+b) What is the position limit on each trader?
 
-c) Display breach, warnings for total stock value held exceeding 80%, 100% of their respective total stock limits
+c) Display "breach" and "warning" for EOD security positions exceeding 100% and 80% of the trader's limit respectively
 
 **Results Table**
 
