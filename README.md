@@ -17,19 +17,24 @@ This project seeks to build a Proof of Concept (POC) of trading limit monitoring
 ### Workflow Diagram:
 <img width="1183" height="440" alt="image" src="https://github.com/user-attachments/assets/628af68f-341c-472a-ac8e-aa6250facda6" />
 
-### PowerBI Report**:
+### PowerBI Report:
 <img width="1305" height="578" alt="image" src="https://github.com/user-attachments/assets/f8bb4176-4967-4118-9604-e4897e03d122" />
 
-Where limits on the trading team's shared holdings of a given security are given by the following table (46 securities in this project):
+### SQL Output:
+<img width="742" height="249" alt="image" src="https://github.com/user-attachments/assets/ac13ee63-74af-41f3-af96-0f919c6dbed0" />
+
+*The SQL outputs and PowerBI outputs are expected to be the same - this project is meant to demonstrate ability across multiple tools.*
+
+How were limit usages determined? The limits on the trading team's shared holdings of a given security were given by the following synthetic table (46 securities in this project):
 
 <img width="503" height="463" alt="image" src="https://github.com/user-attachments/assets/e5ce38ba-d64d-4c0e-a890-931f4c212250" />
 
 ## Scenario Breakdown:
 A financial institute has a team of securities traders, with metrics like "limits" flagging high-risk behaviour (and sometimes preventing it in the form of pre-trade limits, though that is out of this project's scope). These traders buy securities and receive funds for selling securities with balances and loans (credit) from
 
-## Desired Tables:
-
-**Account Limits**
+## Key Questions:
+Below, I list the questions I tasked myself with, given my generated dataset. I broke down each question into subtasks, which helped me build my SQL query/PowerBI Columns/Excel Columns step by step.
+**Which accounts have breached their limits?**
 
 a) What is the EOD position of each account?
 
@@ -37,7 +42,7 @@ b) What are the position limits on each account?
 
 c) Display "breach" and "warning" for EOD account positions exceeding 100% and 80% of the account's limit respectively, with different flags for credit/balance breaches or warnings.
 
-**Securities Limits**
+**Which securities had their limits breached?**
 
 a) What is the trading team's EOD position of each security?
 
@@ -45,19 +50,10 @@ b) What is the position limit on each security?
 
 c) Display "breach" and "warning" for EOD security positions exceeding 100% and 80% of the securitiy's limit respectively
 
-**Trader Limits**
+**Which traders breached their limits?**
 
 a) What is the EOD position of each trader in the firm's team?
 
 b) What is the position limit on each trader?
 
 c) Display "breach" and "warning" for EOD security positions exceeding 100% and 80% of the trader's limit respectively
-
-**Results Table**
-
-Create a limit result table and insert the above limit results into for PowerBI or Python program to extract the data out
-
-PowerBI
-Using PowerBI to create a report to monitor when the total purchases of each company exceeds the total stock limit---joining two tables -trade_basic and SecurityTierLimit with Total_Stock_Limit
-a) In PowerBI, create a calculated column Usage PCT showing how much the total stock volume of a given company purchased compares to that company’s purchased-volume limit
-
